@@ -1,4 +1,5 @@
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -30,6 +31,7 @@ export class UserComponent implements OnInit {
   email: any | undefined;
   password: any | undefined;
   isAdmin: boolean | undefined;
+
   student1: number | undefined;
    id: number |undefined;
    user: User | undefined;
@@ -64,7 +66,9 @@ export class UserComponent implements OnInit {
       Response => {
         console.log(Response);
         this.users = Response;
+
       } 
+
     )
   } 
 
@@ -91,9 +95,11 @@ export class UserComponent implements OnInit {
     
   }
 
+
   /* onUsersEdit(idUser:number){
      const user ={
       _id: this._id,
+
       username: this.username,
       firstname: this.firstname,
       lastname: this.lastname,
@@ -101,7 +107,6 @@ export class UserComponent implements OnInit {
       password: this.password,
       isAdmin: this.isAdmin,
       student1: this.student1,
-
     } 
     this.usercrudService.UserEdit(idUser,user)
 
@@ -131,8 +136,6 @@ export class UserComponent implements OnInit {
         console.log(response)
       })
   }
-  
-
-  
+ 
 
 }

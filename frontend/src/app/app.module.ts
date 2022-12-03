@@ -9,12 +9,17 @@ import { LoginComponent } from './components/login/login.component';
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { HttpClientModule } from '@angular/common/http';
 import { AdminDashbordComponent } from './components/admin-dashbord/admin-dashbord.component';
 import { StudentComponent } from './components/student/student.component';
 import { UserComponent } from './components/user/user.component';
 import { SidebarDashbordComponent } from './components/sidebar-dashbord/sidebar-dashbord.component';
+
+import { FooterComponent } from './components/footer/footer.component';
+
 
 
 @NgModule({
@@ -27,6 +32,9 @@ import { SidebarDashbordComponent } from './components/sidebar-dashbord/sidebar-
     StudentComponent,
     UserComponent,
     SidebarDashbordComponent,
+
+    FooterComponent,
+
     
     
   ],
@@ -38,6 +46,7 @@ import { SidebarDashbordComponent } from './components/sidebar-dashbord/sidebar-
     HttpClientModule,
     ReactiveFormsModule,
    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,6 @@ const Users = require("../models/user");
 
 exports.editUser = async (req, res, next) => {
     try{
-
         const {username, firstname, lastname, email,isAdmin,student1} = req.body; 
         Users.findById(req.params.idUser)
         .then(user => user.updateOne({username, firstname, lastname, email,isAdmin,student1} ).then(Users => res.json(Users)))

@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { UsercrudService } from 'src/app/services/usercrud.service';
 import { User } from '../user/User';
 
+
 @Component({
   selector: 'app-student',
   templateUrl: './student.component.html',
@@ -100,7 +101,5 @@ export class StudentComponent implements OnInit {
         console.log(response)
       })
   }
-
-
 
 }

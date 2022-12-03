@@ -12,7 +12,9 @@ const routes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'admin_dashbord', component: AdminDashbordComponent},
   {path:'users', component: UserComponent},
+
   {path:'students/:id', component: StudentComponent}
+
 
 ];
 

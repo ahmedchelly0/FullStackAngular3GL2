@@ -1,9 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-
 import { map } from 'rxjs/operators';
-
 import { User } from '../components/user/User';
 
 @Injectable({
@@ -22,11 +20,11 @@ export class UsercrudService {
   }
 
 
+
   getUserById(id:number){
     return this.http.get(`http://localhost:5000/api/user/getById/${id}`)
     
   }
-
 
   //: Observable<any> 
   UserDelete(idUser:number){
@@ -40,12 +38,9 @@ export class UsercrudService {
     return this.http.put(`http://localhost:5000/api/user/edit/${idUser}`,user)
     .subscribe(data => console.log(data));
   } */
-
   
-
   UserEdit(data: any, id: string): Observable<any> {
     return this.http.put(`http://localhost:5000/api/user/edit/${id}`, data)
 }
 
-  
 }
