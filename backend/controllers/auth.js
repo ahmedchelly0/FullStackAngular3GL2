@@ -8,10 +8,9 @@ const Users = require("../models/user");
 
 exports.editUser = async (req, res, next) => {
     try{
-
-        const {username, firstname, lastname, email} = req.body; 
+        const {username, firstname, lastname, email,isAdmin,student1} = req.body; 
         Users.findById(req.params.idUser)
-        .then(user => user.updateOne({username, firstname, lastname, email} ).then(() => res.json({ success: true })))
+        .then(user => user.updateOne({username, firstname, lastname, email,isAdmin,student1} ).then(Users => res.json(Users)))
         .catch(err => {
             res.status(404).json({ success: false, id: req.params.idUser, msg: err })
         })
@@ -35,7 +34,27 @@ exports.deletUser = async (req, res, next) => {
         next(error)
     }
 }
-
+exports.findOne = (req, res) => {
+    User.findById(req.params.id)
+        .then((data) => {
+            if (!data) {
+                return res.status(404).send({
+                    message: "Message not found with id " + req.params.id,
+                });
+            }
+            res.send(data);
+        })
+        .catch((err) => {
+            if (err.kind === "ObjectId") {
+                return res.status(404).send({
+                    message: "Message not found with id " + req.params.id,
+                });
+            }
+            return res.status(500).send({
+                message: "Error retrieving message with id " + req.params.id,
+            });
+        });
+};
 exports.getUser = async (req, res, next) => {
     try{
 

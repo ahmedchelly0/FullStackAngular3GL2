@@ -83,16 +83,29 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">List Users</h4>
-
-                        <div class="table-responsive">
+                       <form [formGroup]="formuser">
+                        <div class="table-responsive" >
                             <table id="zero_config" class="table table-hover table-bordered" datatable>
                                 <thead>
                                     <tr>
-                                        <th>Name</th>
-                                        <th>price</th>
+                                        <th>username</th>
+                                        <th>firstname</th>
+                                        <th>lastname</th>
+                                        <th>email</th>
+                                        <th>password</th>
+                                        <th>isAdmin</th>
+                                        <th>student1</th>
                                         <th>Edit</th>
-                                        <th>Delete</th>
                                     </tr>
+                                    <td><input  formControlName="username"  type="text"  ></td>
+                                    <td><input formControlName="firstname"  type="text" ></td>
+                                    <td><input formControlName="lastname"  type="text" ></td>
+                                    <td><input  formControlName="email"  type="text" ></td>
+                                    <td><input  formControlName="password"  type="text" ></td>
+                                    <td><input  formControlName="isAdmin"  type="text" ></td>
+                                    <td><input  formControlName="student1"  type="text" ></td>
+                                    
+                                    <td><button class="btn btn-danger" (click)="editusr()"> <b> Edit </b> <i class="fa fa-trash" aria-hidden="true"></i></button> </td>
                                 </thead>
                                 <!-- <tbody *ngFor="let product of products">
                                     <td><span>{{product.name}}</span></td>
@@ -102,6 +115,8 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
                                 </tbody> -->
                             </table>
                         </div>
+
+                    </form>
                     </div>
                 </div>
             </div>

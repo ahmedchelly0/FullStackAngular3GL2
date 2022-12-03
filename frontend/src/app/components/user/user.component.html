@@ -105,23 +105,28 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
                                         <th>Firstname</th>
                                         <th>Lastname</th>
                                         <th>Email</th>
+                                        <th>password</th>
                                         <th>Admin</th>
+                                        <th>StudentNumber</th>
                                         <th>Edit</th>
                                         <th>Delete</th>
 
                                     </tr>
                                 </thead>
                                  <tbody *ngFor="let user of users">
-
-                                    <td><input type="text" value="{{user.username}}"></td>
-                                    <td><input type="text" value="{{user.firstname}}"></td>
-                                    <td><input type="text" value="{{user.lastname}}"></td>
-                                    <td><input type="text" value="{{user.email}}"></td>
-                                    <td><span>{{user.isAdmin}}</span></td>
-                                    <td><button class="btn btn-warning" (click)="onUsersEdit(user._id)"><b> Edit </b> <i class="fas fa-edit"></i></button> </td>
+                                    <td>{{user.username}}</td>
+                                    <td>{{user.firstname}}</td>
+                                    <td>{{user.lastname}}</td>
+                                    <td>{{user.email}}</td>
+                                    <td>{{user.password}}</td>
+                                    <td>{{user.isAdmin}}</td>
+                                    <td>{{user.student1}}</td>
                                     <td><button class="btn btn-danger" (click)="removeUser(user._id)"> <b> Delete </b> <i class="fa fa-trash" aria-hidden="true"></i></button> </td>
+                                    <td><button class="btn btn-danger"  [routerLink]="['/students',user._id]"> <b> Edit </b> <i class="fa fa-trash" aria-hidden="true"></i></button> </td>
+
                                 </tbody> 
                             </table>
+           
                         </div>
                     </div>
                 </div>
@@ -136,18 +141,13 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
                             <div id="login-box">
                                 <div class="left">
                                     <h1>Add User</h1>
-                                    <input type="text" class="form-control" [(ngModel)]="username" name="name" placeholder="Username" /><br/>
-                                    <input type="text" class="form-control" [(ngModel)]="firstname" name="price" placeholder="First Name" /><br/>
-                                    <input type="text" class="form-control" [(ngModel)]="lastname" name="image" placeholder="Last Name" /><br/>
-                                    <input type="text" class="form-control" [(ngModel)]="email" name="image" placeholder="E-mail" /><br/>
-                                    <input type="text" class="form-control" [(ngModel)]="password" name="image" placeholder="password"/><br/>
-                                    <fieldset>
-                                        <div>
-                                            <input type="checkbox" value="Admin" class="form-control" [(ngModel)]="isAdmin" name="Admin"/><br/>
-                                            <label for="Admin">Admin</label>
-                                        </div>
-                                   </fieldset>
-                                    <input type="text" class="form-control" [(ngModel)]="student1" id="Admin" name="Admin" placeholder="Student Id" /><br/>
+                                    <input type="text" class="form-control" [(ngModel)]="username" name="name" placeholder="name" /><br/>
+                                    <input type="text" class="form-control" [(ngModel)]="firstname" name="price" placeholder="price" /><br/>
+                                    <input type="text" class="form-control" [(ngModel)]="lastname" name="image" placeholder="URL-image" /><br/>
+                                    <input type="text" class="form-control" [(ngModel)]="email" name="image" placeholder="URL-image" /><br/>
+                                    <input type="text" class="form-control" [(ngModel)]="password" name="image" placeholder="URL-image" /><br/>
+                                    <input type="checkbox" class="form-control" [(ngModel)]="isAdmin" name="image" placeholder="URL-image" /><br/>
+                                    <input type="text" class="form-control" [(ngModel)]="student1" name="image" placeholder="URL-image" /><br/>
                                     <input type="submit" class="btn btn-primary" name="signup_submit" value="ADD" />
                                 </div> 
                             </div>
@@ -155,10 +155,7 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
                     </div>
                 </div>
             </div>
-        </div>
-
-
-        
+        </div>     
 
     </div>
 </div>
