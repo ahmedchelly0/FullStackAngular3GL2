@@ -1,0 +1,132 @@
+
+<div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+
+<header class="topbar" data-navbarbg="skin6">
+    <nav class="navbar top-navbar navbar-expand-md">
+        <div class="navbar-header" data-logobg="skin6">
+            <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                    class="ti-menu ti-close"></i></a>
+            <div class="navbar-brand">
+                <a href="index.html">
+                    <b class="logo-icon">
+                        <img src="assets/backoffice/assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                        <img src="assets/backoffice/assets/images/logo-icon.png" alt="homepage" class="light-logo" />
+                    </b>
+                    <span class="logo-text">
+                        <img src="assets/backoffice/assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                        <img src="assets/backoffice/assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
+                    </span>
+                </a>
+            </div>
+            <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
+                data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+                    class="ti-more"></i></a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav float-left mr-auto ml-3 pl-1">
+            </ul>
+            <ul class="navbar-nav float-right">
+                <li class="nav-item d-none d-md-block">
+                    <a class="nav-link" href="javascript:void(0)">
+                        <form>
+                            <div class="customize-input">
+                                <input class="form-control custom-shadow custom-radius border-0 bg-white"
+                                    type="search" placeholder="Search" aria-label="Search">
+                                <i class="form-control-icon" data-feather="search"></i>
+                            </div>
+                        </form>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="assets/backoffice/assets/images/users/profile-pic.jpg" alt="user" class="rounded-circle"
+                            width="40">
+                        <span class="ml-2 d-none d-lg-inline-block"><span>Hello,</span> <span
+                                class="text-dark">Jason Doe</span> <i data-feather="chevron-down"
+                                class="svg-icon"></i></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+                        <a class="dropdown-item" href="javascript:void(0)"><i data-feather="user"
+                                class="svg-icon mr-2 ml-1"></i>
+                            My Profile</a>
+                        <a class="dropdown-item" href="javascript:void(0)"><i data-feather="credit-card"
+                                class="svg-icon mr-2 ml-1"></i>
+                            My Balance</a>
+                        <a class="dropdown-item" href="javascript:void(0)"><i data-feather="mail"
+                                class="svg-icon mr-2 ml-1"></i>
+                            Inbox</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="javascript:void(0)"><i data-feather="settings"
+                                class="svg-icon mr-2 ml-1"></i>
+                            Account Setting</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="javascript:void(0)"><i data-feather="power"
+                                class="svg-icon mr-2 ml-1"></i>
+                            Logout</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="pl-4 p-3"><a href="javascript:void(0)" class="btn btn-sm btn-info">View
+                                Profile</a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<app-sidebar-dashbord></app-sidebar-dashbord>
+<div class="page-wrapper">
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">List Users</h4>
+
+                        <div class="table-responsive">
+                            <table id="zero_config" class="table table-hover table-bordered" datatable>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>price</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <!-- <tbody *ngFor="let product of products">
+                                    <td><span>{{product.name}}</span></td>
+                                    <td><span>{{product.price}}</span></td>
+                                    <td><button class="btn btn-warning"><b> Edit </b> <i class="fas fa-edit"></i></button> </td>
+                                    <td><button class="btn btn-danger"> <b> Delete </b> <i class="fa fa-trash" aria-hidden="true"></i></button> </td>
+                                </tbody> -->
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12" style="justify-content: center;">
+                <div class="card">
+                    <div class="card-body">
+                        <form >
+                            <div id="login-box">
+                                <!-- <div class="left">
+                                    <h1>Add User</h1>
+                                    <input type="text" class="form-control" [(ngModel)]="name" name="name" placeholder="name" /><br/>
+                                    <input type="text" class="form-control" [(ngModel)]="price" name="price" placeholder="price" /><br/>
+                                    <input type="text" class="form-control" [(ngModel)]="image" name="image" placeholder="URL-image" /><br/>
+                                    <input type="submit" class="btn btn-primary" name="signup_submit" value="ADD" />
+                                </div> -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
